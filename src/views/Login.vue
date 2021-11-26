@@ -1,15 +1,15 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
+<template lang="">
+  <div>
+    Login/Sign Up
   </div>
 </template>
-<script lang="ts">
+<script>
 import Vue from 'vue';
 
 export default Vue.extend({
 
 });
 </script>
-<style>
+<style lang="">
 
 </style>
