@@ -3,25 +3,26 @@
     <div>
       <div class="input-container">
         <input
-          v-model="input"
+          v-model="form.title"
           placeholder="Title"
         >
       </div>
       <div class="input-container">
         <input
-          v-model="input"
+          v-model="form.year"
           placeholder="Year"
         >
       </div>
       <div class="input-container">
         <input
-          v-model="input"
+          v-model="form.type"
           placeholder="Anime or Manga?"
         >
       </div>
       <Button
         round
         type="primary"
+        @click="createMedia()"
       >
         Submit
       </Button>
@@ -32,10 +33,38 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Button } from 'element-ui';
+import api from '@/api';
 
 export default Vue.extend({
   name: 'MediaCreate',
   components: { Button },
+  data() {
+    return {
+      form: {
+        title: '',
+        year: '',
+        type: '',
+      },
+    };
+  },
+  methods: {
+    async createMedia() {
+      // TODO: Some sort of loading
+      const media = { title: this.form.title, year: Number(this.form.year), type: this.form.type };
+      const createResp = await api.Media.create(media);
+      if (createResp.error) {
+        console.log('Error: ', createResp.error);
+        // TODO: Show error message or something
+        return;
+      }
+      console.log('Created media! ', createResp);
+
+      // Reset the form's inputs
+      this.form.title = '';
+      this.form.year = '';
+      this.form.type = '';
+    },
+  },
 });
 </script>
 
