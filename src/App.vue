@@ -8,6 +8,9 @@
         <router-link to="/about">
           About
         </router-link>
+        <router-link to="/admin">
+          Admin
+        </router-link>
       </div>
       <div id="col-2" />
       <div id="col-3">

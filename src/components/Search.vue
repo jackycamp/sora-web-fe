@@ -45,8 +45,8 @@ export default Vue.extend({
   }
   input {
     appearance: none !important;
-    border-width:0px !important;
-    border:none !important;
+    border-width: 0px !important;
+    border: none !important;
     border-radius: 20px;
     box-sizing: border-box;
     display: inline-block;

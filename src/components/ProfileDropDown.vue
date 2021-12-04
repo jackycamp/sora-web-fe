@@ -16,7 +16,14 @@
         size="small"
         @click="loginHandler"
       >
-        Login or Sign Up
+        Login
+      </Button>
+      <Button
+        round
+        size="small"
+        @click="signUpHandler"
+      >
+        Sign Up
       </Button>
       <Button
         slot="reference"
@@ -41,6 +48,11 @@ export default Vue.extend({
     loginHandler(): void {
       if (this.$route.name !== 'Login') {
         this.$router.push('/login');
+      }
+    },
+    signUpHandler(): void {
+      if (this.$route.name !== 'SignUp') {
+        this.$router.push('/signup');
       }
     },
     profileClickHandler(): void {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Welcome Back! </h2>
+    <h2>Sign Up for a free account!</h2>
     <div class="split-view">
       <div class="img-container">
         <img
@@ -9,6 +9,12 @@
         >
       </div>
       <div class="inputs">
+        <div class="input-container">
+          <input
+            v-model="input"
+            placeholder="your@email.com"
+          >
+        </div>
         <div class="input-container">
           <input
             v-model="input"
@@ -21,11 +27,17 @@
             placeholder="password"
           >
         </div>
+        <div class="input-container">
+          <input
+            v-model="input"
+            placeholder="verify password"
+          >
+        </div>
         <Button
           round
           type="primary"
         >
-          Log in
+          Sign Up
         </Button>
       </div>
     </div>
@@ -38,7 +50,7 @@ import { Button } from 'element-ui';
 // TODO: This component should probably have labels for the input fields
 
 export default Vue.extend({
-  name: 'LoginPage',
+  name: 'SignUpPage',
   components: { Button },
 });
 </script>

@@ -47,8 +47,8 @@ export default Vue.extend({
     width: 15rem;
     margin: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition-property: transform;
-    transition-duration: 500ms;
+    transition-property: transform box-shadow;
+    transition-duration: 750ms;
 }
 .media-title {
   padding: 1rem;
@@ -59,6 +59,7 @@ export default Vue.extend({
 .media-item:hover{
     transform: translate(0, -20px);
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 </style>
