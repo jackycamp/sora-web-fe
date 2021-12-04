@@ -30,6 +30,7 @@ export default Vue.extend({
 
 <style scoped>
  .media-wrapper {
+   padding-top: 2rem;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
